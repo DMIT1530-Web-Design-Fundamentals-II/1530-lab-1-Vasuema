@@ -25,34 +25,36 @@ header img {
   margin-right: 1rem;
 }
 
-header img, 
-h1{
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+header img,
+h1 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 section {
   background-color: #fff;
-  margin: 50px;
   padding: 1rem;
-  max-width: 500px;
+  max-width: 450px;
+  border-radius: 10px;
 }
-section img{
-	max-width: 400px;
+section img {
+  max-width: 400px;
+  justify-content: center;
 }
 section p,
-section h3{
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+section h3 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-aside{
-	margin-left: 1rem;
-	margin-bottom: 3rem;
-	max-width: 300px;
+aside {
+  margin-left: 1rem;
+  margin-bottom: 3rem;
+  max-width: 300px;
+  border-radius: 10px;
 }
-aside p{
-	padding-top: 1rem;
+aside p {
+  padding-top: 1rem;
 }
 
 aside,
@@ -63,12 +65,12 @@ footer {
   margin-top: 3rem;
 }
 
-footer{
-	text-align: center;
+footer {
+  text-align: center;
 }
 
-footer a{
-	color: #fff;
+footer a {
+  color: #fff;
 }
 
 h1,
@@ -80,20 +82,34 @@ h3 {
 h2 {
   color: #fff;
   padding-top: 4rem;
-  padding-left: 3rem;
 }
 
 /* Mobile View */
+@media (max-width: 759px) {
+  .flex-all {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Medium View */
+@media (min-width: 760px) and (max-width: 1199px) {
+  .flex-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 /* Largest View */
-.flex-all{
-	display: flex;
+@media (min-width: 1200px) {
+  .flex-all {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
 }
-
-.flex-container{
-display: flex;
-
-}
-
